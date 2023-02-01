@@ -1,0 +1,132 @@
+//Header
+#header {
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  line-height: var(--header-height);
+  padding: 0 16px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-logo-bars {
+  padding: 8px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.header-logo-bars:hover {
+  border-radius: 24px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header-logo-img {
+  padding: 18px 14px 18px 16px;
+  display: flex;
+  cursor: pointer;
+}
+
+.header-center {
+  display: flex;    
+  align-items: center;
+  width: 50%;
+}
+
+.header-search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  height: var(--header-search-height);
+  //   background-color: blue;
+  flex: 1;
+}
+
+.header-search-form input {
+  border: none;
+  margin: 20px;
+  height: auto;
+  width: 100%;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: hsl(0, 0%, 100%);
+  
+  color: var(--text-color);
+    // &:focus {        
+    //     background-color: blue;
+    // }
+}
+
+.header-search-form .header-search-keboard-icon {
+  vertical-align: middle;
+  height: 15px;
+  line-height: 0;
+  width: 19px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header-search-form button {
+  border-radius: 0 40px 40px 0;
+  background-color: #f8f8f8;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+  height: var(--header-search-height);
+  width: 64px;
+  margin: 0;
+
+  &:hover {
+    border-color: #c6c6c6;
+    background-color: #f0f0f0;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+  }
+}
+
+.header-center-icon {
+  height: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.header-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-end-icon-link {
+  display: flex;
+}
+
+.header-end-icon {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.header-user-img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}

@@ -1,0 +1,90 @@
+@import "normalize.css";
+
+:root {
+  --primary: #ff0000;
+  --header-height: 56px;
+  --header-search-height: 40px;
+  --text-color: hsl(0, 0%, 6.7%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container {
+  padding: 0 16px;
+  margin-top: calc(3px + var(--header-height) ) ;
+}
+
+//Reponsive
+
+.grid {
+  width: 100%;
+  display: flex;
+  // flex-wrap: wrap;
+}
+
+.row {
+  // width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+// Mobie
+@media screen and (max-width: 739px) {
+  h1 {
+    color: red;
+  }
+}
+//Tablet
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+  h1 {
+    color: blue;
+  }
+}
