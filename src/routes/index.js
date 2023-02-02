@@ -1,15 +1,37 @@
-import Home from "../pages/Home";
-import DefaultLayout from "../components/Layouts/DefaultLayout";
+import pages from "../pages";
+import Layout from "../components/Layouts";
+import configPath from "./configPath";
 // Public routes
 const publicRotes = [
   {
-    path: "/",
-    component: Home,
-    layout: DefaultLayout,
+    path: configPath.home,
+    component: pages.Home,
+    layout: Layout.DefaultLayout,
   },
   {
-    path: "/short",
-    component: Home,
+    path: configPath.watch,
+    component: pages.Watch,
+    layout: Layout.NotNavigationLayout,
+  },
+  {
+    path: configPath.shorts,
+    component: pages.Shorts,
+    layout: Layout.DefaultLayout,
+  },
+  {
+    path: configPath.lirbrary,
+    component: pages.Library,
+    layout: Layout.DefaultLayout,
+  },
+  {
+    path: configPath.subscribe,
+    component: pages.Subscribe,
+    layout: Layout.DefaultLayout,
+  },
+  {
+    path: configPath.search,
+    component: pages.Search,
+    layout: Layout.DefaultLayout,
   },
 ];
 

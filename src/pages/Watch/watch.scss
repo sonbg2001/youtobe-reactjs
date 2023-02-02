@@ -1,3 +1,24 @@
 
+#watch {
+    padding: 0 16px;
+    display: flex;
+    // align-items: center;
+}
 
+.watch-video-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
 
+.watch-video {
+    width: 100%;
+    min-height: 400px;  
+    
+}
+
+.watch-list-video {
+    display: flex;
+}

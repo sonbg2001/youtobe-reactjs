@@ -1,123 +1,37 @@
+import "./ListVideo.scss";
+import dataFetch from "../../../../dataFetch";
+import { Link } from "react-router-dom";
+import configPath from "../../../../routes/configPath";
 function ListVideo() {
+  const listVideo = dataFetch.listVideo || [];
   return (
-    <div>
-      <div className="grid">
+    <div className="grid">
         <ul className="video-list row">
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
+          {listVideo.map((item) => {
+            return (
+              <li key={item.id} className="video-list-item col col-lg-3">
+                <Link to={configPath.watch + item.ytbId}
+                  className="video-list-item--link"
+                >
+                  <img
+                    className="video-list-item-img col-lg-12"
+                    src={"https://i.ytimg.com/vi/" + item.ytbId + "/hq720.jpg"}
+                    alt="img"
+                  ></img>
 
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
-
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
-
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
-
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
-
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
-
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
-          <li className="video-list-item col-3">
-            <a href="https://www.youtube.com/watch?v=IoHMd14AjNI">
-              <img
-                className="video-list-item-img col-12"
-                src="https://i.ytimg.com/vi/xxM1kfj4nq8/hq720.jpg"
-                alt="img"
-              ></img>
-
-              <h2>Heading</h2>
-              <p>Tac gia</p>
-              <div>
-                <p>Tac gia</p>
-                <p>Tac gia</p>
-              </div>
-            </a>
-          </li>
+                  <h2>Heading</h2>
+                  <p>Tac gia</p>
+                  <div>
+                    <p>Tac gia</p>
+                    <p>Tac gia</p>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
+          
         </ul>
       </div>
-    </div>
   );
 }
 
