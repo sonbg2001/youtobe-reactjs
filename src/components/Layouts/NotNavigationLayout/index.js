@@ -5,7 +5,7 @@ function NotNavigationLayout({ children }) {
     <div>
       <Header />
       <div>
-        <div >{children}</div>
+        <div className="container__children--watch" >{children}</div>
       </div>
       <Footer />
     </div>

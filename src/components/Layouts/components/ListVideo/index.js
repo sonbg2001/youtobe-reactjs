@@ -1,7 +1,6 @@
 import "./ListVideo.scss";
 import dataFetch from "../../../../dataFetch";
 import { Link } from "react-router-dom";
-import configPath from "../../../../routes/configPath";
 function ListVideo() {
   const listVideo = dataFetch.listVideo || [];
   return (
@@ -10,7 +9,7 @@ function ListVideo() {
           {listVideo.map((item) => {
             return (
               <li key={item.id} className="video-list-item col col-lg-3">
-                <Link to={configPath.watch + item.ytbId}
+                <Link to={"/watch/" + item.ytbId}
                   className="video-list-item--link"
                 >
                   <img

@@ -1,24 +1,25 @@
-
 #watch {
-    padding: 0 16px;
-    display: flex;
-    // align-items: center;
+  padding: 40px 100px;
+  display: flex;
+  // align-items: center;
 }
 
 .watch-video-container {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
 }
 
 .watch-video {
-    width: 100%;
-    min-height: 400px;  
-    
+  width: 100%;
+  min-height: 400px;
 }
 
 .watch-list-video {
-    display: flex;
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  margin: 0 20px;
 }
